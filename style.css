@@ -20,7 +20,7 @@
 html,
 body {
   background: #fff;
-  line-height: 1.6;
+  line-height: 1.5;
   /* font-size: 16px; */
   font-family: "Ubuntu", sans-serif;
   /* font-family: 'Josefin Sans', sans-serif; */
@@ -62,15 +62,14 @@ p {
   padding: 0 30px;
   text-transform: uppercase;
 }
-.main__header .title {
-  /* font-family: "Ubuntu", sans-serif; */
+/* .main__header .title {
   font-family: 'Permanent Marker', cursive;
   text-shadow: 1px 1px 1px #D7B34D;
 }
 .main__header .title span{
   color: #D7B34D;
   text-shadow: 2px 2px 4px #000;
-}
+} */
 
 .main__header .logo {
   width: 120px;
@@ -92,21 +91,28 @@ p {
 
 .main__header h3 {
   font-size: clamp(1.7rem, 3vw, 4rem);
-  /* font-style: italic; */
+  /* color: linear-gradient(90deg, #000, #fff); */
+  font-family: 'Permanent Marker', cursive;
+  /* text-shadow: 2px 2px 4px #000; */
   line-height: 1.1;
   padding-right: 20px;
+  background: linear-gradient(90deg, #ffff 0%, #efca69 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  /* font-style: italic; */
 }
 
 .main__header h5 {
   font-size: clamp(1.3rem, 2.5vw, 1.5rem);
-  
-  /* font-family: 'Dancing Script', cursive; */
+  background: linear-gradient(to right, #efca69 10%, #fff 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
   font-family: 'Sacramento', cursive;
   font-style: italic;
   letter-spacing: 2.9px;
   text-transform: lowercase;
   color: #D7B34D;
-  text-shadow: 2px 2px 4px #000;
+  /* text-shadow: 1px 1px 1px #000; */
 }
 
 .navbar-right {
@@ -123,6 +129,7 @@ p {
   margin: 20px;
   padding-bottom: 2px;
   position: relative;
+  font-style: italic;
 }
 
 .navbar-right a {
@@ -410,32 +417,8 @@ p {
   background: url(/assets/img/luxcollection.jpg) no-repeat center center / cover;
 }
 
-/* .slide .content {
-  position: absolute;
-  bottom: 100px;
-  left: -600px;
-  width: 500px;
-  background: rgba(255, 255, 255, 0.8);
-  color: #222;
-  padding: 30px;
-  opacity: 0;
-}
-
-.slide.current .content {
-  transform: translateX(600px);
-  opacity: 1;
-  transition: all 0.7s ease-in-out 0.3s;
-}
-
-.slide .content h3 {
-  margin-bottom: 10px;
-} */
-
-
 
 /* Trending -page*/
-
-
 .trending-covers {
   background: #fff;
   display: grid;
@@ -803,7 +786,6 @@ p {
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
-
 }
 
 .inner-left {
@@ -1071,6 +1053,12 @@ p {
 
 /* ***********************Perfume Page************************** */
 
+
+
+
+
+
+
 /* Menu-Btn */
 .hamburger {
   display: none;
@@ -1242,6 +1230,20 @@ p {
   }
 
 
+  .footer-inner .inner-left {
+    margin-bottom: 20px;
+    
+  }
+  .footer-inner .inner-right li a {
+    margin-right: 0;
+  }
+  .footer-inner .inner-right {
+    margin-right: 0;
+    display: block;
+  }
+  .footer-inner{
+    display: block;
+  }
 
 
 
@@ -1249,13 +1251,11 @@ p {
 
 @media(max-width: 824px) {
 
-  /* .header-inner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  } */
+  .main__header .logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
 
   .categories-items h3 {
     font-size: 14px;
@@ -1292,6 +1292,7 @@ p {
     text-align: right;
     width: 470px !important;
     height: 200px !important;
+    margin-left: 25px;
   }
 
   .gmap_canvas {
@@ -1306,26 +1307,6 @@ p {
     height: 200px !important;
   }
 
-  .footer-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-inner .inner-left {
-    margin-bottom: 20px;
-  }
-
-  .footer-inner .inner-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 10px 0;
-    padding: 0;
-  }
-
   .perfume-categories .categories-items,
   .attar-categories .categories-items,
   .bodyspray-categories .categories-items,
@@ -1333,11 +1314,43 @@ p {
   .accessories-categories .categories-items {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
+  /* .footer-inner .inner-left a {
+    font-size: 10px;
+  } */
+  .footer-inner .inner-right ul li a {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 550px) {
+
+  .main__header .logo {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .main__header h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin-bottom: 10px;
+  }
+  
+  .main__header h5 {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    line-height: 1;
+  }
+
+
+
   .categories-items {
     grid-template-columns: 1fr;
+    
+  }
+
+  .details-content p {
+    flex-wrap: wrap;
   }
 
   .perfume-categories .categories-items,
@@ -1353,6 +1366,8 @@ p {
     text-align: right;
     width: 400px !important;
     height: 200px !important;
+    margin-left: 25px;
+    padding-left: 20px;
   }
 
   .gmap_canvas {
