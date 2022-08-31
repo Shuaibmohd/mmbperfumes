@@ -163,41 +163,6 @@ p {
 
 /* Section--Main */
 
-/* section {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  color: #fff;
-  position: relative;
-} */
-/* box-shadow:  */
-/* inset 0px 180px 80px -80px #013B7A; */
-/* inset 0px 180px 80px -80px #CA0139; */
-/* inset 0px -11px 8px -10px #000;  */
-
-/* .section-main {
-  
-} */
-
-/* .text__content{
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 550px;
-  line-height: 1.1;
-  z-index: 100;
-}
-.text__content h1{
-  font-size: clamp(2rem, 5vw + 1rem, 4rem);
-  margin: 5px 0;
-}
-.text__content h3{
-  font-size: clamp(0.5rem, 5vw + 0rem, 1.5rem);
-  font-style: italic;
-} */
-
 /* Button */
 .btn-animate {
   position: relative;
@@ -248,18 +213,6 @@ p {
   transform: translateY(0);
   /* transition: 0.4s; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Buttons */
 .btn {
@@ -345,10 +298,6 @@ p {
   background: #fff;
   color: #222;
 }
-
-/* .buttons button:focus{
-    outline: none;
-} */
 
 /* Header Content  */
 .header-content {
@@ -775,7 +724,7 @@ p {
 .footer {
   border-top: #000;
   max-width: 95%;
-  margin: 40px auto;
+  margin: 60px auto;
 
 }
 
@@ -788,14 +737,14 @@ p {
   width: 100%;
 }
 
-.inner-left {
+.inner-left ul{
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.inner-right {
+.inner-right ul{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1241,10 +1190,13 @@ p {
     margin-right: 0;
     display: block;
   }
-  .footer-inner{
+  .footer-inner .inner-right ul{
+    margin-right: 0;
     display: block;
   }
-
+  .footer-inner{
+    flex-direction: column;
+  }
 
 
 }
@@ -1255,6 +1207,18 @@ p {
     width: 100px;
     height: auto;
     margin-right: 10px;
+  }
+
+  .slider {
+    width: 100%;
+    height: 50vh;
+  }
+  .buttons button.prev {
+    top: 30%;
+  }
+  
+  .buttons button.next {
+    top: 30%;
   }
 
   .categories-items h3 {
@@ -1315,10 +1279,6 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-
-  /* .footer-inner .inner-left a {
-    font-size: 10px;
-  } */
   .footer-inner .inner-right ul li a {
     font-size: 12px;
   }
